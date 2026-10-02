@@ -92,3 +92,7 @@ This portfolio is designed to be beginner-friendly. Here's what you can learn:
 **Note**: This portfolio uses Font Awesome icons via CDN. An internet connection is required for icons to display properly.
 
 # My-Portfolio
+
+# My-Portfolio
+Personal portfolio showcasing my projects, technical skills, and achievements.
+ 
