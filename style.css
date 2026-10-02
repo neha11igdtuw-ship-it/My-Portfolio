@@ -1,0 +1,365 @@
+/* --- Global Styles --- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a192f; /* Deep navy background */
+  font-family: 'Poppins', sans-serif;
+  color: #ccd6f6; /* Light text color for contrast */
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+  font-weight: 600;
+}
+
+a {
+  color: #96c5ff; /* Primary accent color */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* --- Accent Color Utilities --- */
+.text-accent {
+  color: #96c5ff !important;
+}
+
+.btn-outline-accent {
+  color: #96c5ff;
+  border-color: #96c5ff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-accent:hover {
+  color: #0a192f; /* Dark text on hover */
+  background-color: #96c5ff;
+  border-color: #96c5ff;
+  transform: translateY(-2px);
+}
+
+.btn-outline-accent.disabled {
+  color: #8892b0;
+  border-color: #8892b0;
+}
+
+/* --- Glass Navbar --- */
+.navbar-glass {
+  background: rgba(10, 25, 47, 0.85); /* Semi-transparent dark blue */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #fff !important;
+}
+
+.nav-link {
+  color: #ccd6f6 !important;
+  font-weight: 400;
+  transition: color 0.3s ease;
+  margin: 0 5px;
+}
+
+.nav-link:hover, .navbar-brand:hover {
+  color: #96c5ff !important;
+}
+
+.nav-link.active {
+  color: #96c5ff !important;
+}
+
+.navbar-nav .nav-item .btn-outline-accent {
+  margin-left: 15px;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 15px;
+  background: #0a192f;
+}
+/* Cursor Blink */
+.cursor {
+  display: inline-block;
+  animation: blink 0.7s infinite;
+  margin-left: 3px;
+}
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Typing Highlighted Words */
+.typing-text::after {
+  content: "";
+  animation: typing 12s infinite;
+}
+
+/* Colors for Highlighted Phrases */
+:root {
+  --neha: #facc15;                /* Gold */
+  --yoga: #22d3ee;                /* Teal */
+  --basketball: #fb923c;          /* Orange */
+  --normal: #ffffff;              /* White */
+}
+
+@keyframes typing {
+
+  /* 0–25% → Neha */
+  0%   { content: "Neha."; color: var(--neha); }
+
+  /* 25–50% → CSE Student */
+  25%  { content: "CSE Student."; color: var(--normal); }
+
+  /* 50–75% → Yoga Champion */
+  50%  { content: "Yoga Champion."; color: var(--yoga); }
+
+  /* 75–100% → Basketball Player */
+  75%  { content: "Basketball Player."; color: var(--basketball); }
+
+  100% { content: "Neha."; color: var(--neha); }
+}
+
+.profile-image-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid #96c5ff;
+  object-fit: cover;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 30px rgba(150, 197, 255, 0.4);
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+#typed-name {
+  color: #96c5ff;
+}
+
+#cursor {
+  font-size: 3rem;
+  animation: blink 0.7s infinite;
+  color: #96c5ff;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #ccd6f6;
+}
+
+.hero-subtitle a {
+  font-weight: 600;
+}
+
+/* --- Main Content Sections --- */
+.portfolio-section {
+  padding: 100px 0;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.section-heading::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #96c5ff;
+  border-radius: 2px;
+  margin: 15px auto 0;
+}
+
+/* --- Base Glass Card --- */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  height: 100%; /* For equal height cards in rows */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+}
+ 
+/* --- Project Card --- */
+.project-card {
+  background: rgba(255, 255, 255, 0.03); /* Darker for project images */
+}
+
+.project-card .card-img-top,
+.skill-card .card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  object-fit: cover;
+  height:auto; /* Fixed height for consistency */
+}
+
+.project-card .card-body {
+  text-align: center;
+}
+
+.project-card .card-title,
+.skill-card .card-title {
+  color: #96c5ff;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.card-text {
+  color: #ccd6f6;
+}
+
+/* --- Skills Card --- */
+.skill-card {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.skill-card .card-body {
+  text-align: center;
+}
+.edu-icon {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto 15px auto;
+    display: block;
+}
+
+
+/* --- Footer --- */
+#footer {
+  background: #061325; /* Slightly lighter for separation */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-icon {
+  color: #ccd6f6;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #96c5ff;
+  transform: scale(1.1);
+}
+
+.footer-text {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #8892b0; /* Softer text color */
+}
+/* ===== Technical Skills Section (Logo Icons) ===== */
+
+.tech-block {
+  margin-bottom: 3rem;
+}
+
+.tech-subheading {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1.8rem;
+  color: #96c5ff;
+}
+
+.skill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.skill-pill {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.2rem 1.6rem;
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.25s ease;
+}
+
+.skill-pill:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #96c5ff;
+}
+
+.skill-icon img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 0.6rem;
+  filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.4));
+}
+
+.skill-name {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+  color: #ccd6f6;
+}
+
+@media (max-width: 768px) {
+  .skill-pill {
+    width: 130px;
+    padding: 1rem 1.2rem;
+  }
+}
+
+ 
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  #cursor {
+    font-size: 2.2rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  .section-heading {
+    font-size: 2rem;
+  }
+}
+
+
